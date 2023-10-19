@@ -1,0 +1,16 @@
+package assignment;
+
+ class Box<T extends Person> {
+	
+	private T data;         //T - employee
+	
+	public void setSalary(float Salary) {
+		Salary =
+		
+		
+	}
+	
+	
+
+}
+

@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+/home/sunbeam/sept_cdac/java_clswrk/day6/.metadata/.plugins/org.eclipse.jdt.core
+2345914986.index
+4241810172.index
+364333001.index
+1709028166.index
+1655732063.index
+1865797976.index

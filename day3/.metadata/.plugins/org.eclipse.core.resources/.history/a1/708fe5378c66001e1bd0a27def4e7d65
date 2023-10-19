@@ -1,0 +1,14 @@
+package sunbeam.assignment3;
+
+//Q2. Copy the Point2D class , along with the package from previous assignment.
+//a) Create a class "TestPointArray1.java" in "tester" package for the following
+//b) Accept , how many no of points to plot from user.
+//c) Create suitable data structure
+//Hint : Point2D[] points=new Point2D[sc.nextInt()];
+//d) Prompt user for x & y co ordinates n store the data suitably
+//Hint : for loop
+//e) Supply Menu to user with various Options like following
+
+public class assign3_q2 {
+
+}

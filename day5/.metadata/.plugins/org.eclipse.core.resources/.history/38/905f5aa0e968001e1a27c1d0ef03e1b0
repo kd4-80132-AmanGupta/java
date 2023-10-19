@@ -1,0 +1,23 @@
+package assign5;
+
+public class SalariedEmployee extends Employee {
+	
+	private double weeklySalary;
+
+	public double getWeeklySalary() {
+		return weeklySalary;
+	}
+
+	public void setWeeklySalary(double weeklySalary) {
+		this.weeklySalary = weeklySalary;
+	}
+
+	@Override
+	public String toString() {
+		return "SalariedEmployee [weeklySalary=" + weeklySalary + super.toString() + "]";
+	}
+	
+	
+	
+
+}

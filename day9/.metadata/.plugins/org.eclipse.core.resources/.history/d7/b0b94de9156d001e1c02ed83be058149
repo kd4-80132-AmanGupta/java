@@ -1,0 +1,58 @@
+package question4;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		int input;
+		
+		Book book;
+		List<Book> lstBook = new ArrayList();
+		
+		do {
+			System.out.println("1. Add new book in list.");
+			System.out.println("2. Display all books in forward order.");
+			System.out.println("3. Delete at book given index.");
+			System.out.println("4. Check if book with given isbn is in list or not.");
+			System.out.println("5. Delete all books in list");
+			System.out.println("6. Display number of books in list");
+			System.out.println("7. Sort all books by price in desc order");
+			System.out.print("Enter your choice : ");
+			input = sc.nextInt();
+			
+			switch(input) {
+			
+			case 1 : book = new Book();
+				     break;
+				     
+			case 2 : 
+			     break;
+			     
+			case 3 : 
+			     break;
+			     
+			case 4 : 
+			     break;
+			     
+			case 5 : 
+			     break;
+			     
+			case 6 : 
+			     break;
+			     
+			case 7 : 
+			     break;
+			
+			
+			}
+			
+			
+		}while(input!=0);
+		
+	}
+
+}

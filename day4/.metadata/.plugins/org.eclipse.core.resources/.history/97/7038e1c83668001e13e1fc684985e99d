@@ -1,0 +1,25 @@
+package assign4;
+
+public class Orange extends Fruit{
+	
+	public Orange(){
+		this("orange",40,"orange",false);
+		
+	}
+	
+    public Orange(String color, double weight, String name, boolean isFresh){
+		
+	}
+	
+	public String taste() {
+		return "sour in taste";
+	}
+	
+	
+	@Override
+    public String toString() {
+    	return (" [ name : "+super.getName() + ", color : "+super.getColor()+", weight : "+super.getWeight() +"]");
+    	
+    }
+
+}

@@ -1,0 +1,33 @@
+package question3;
+
+public class Main1 {
+	public static <T> T add(T a ,T b) {
+		 = a.doubleValue()+b.doubleValue();
+		return res;
+		
+	}
+	public static void main(String args[]) {
+		class Point{
+			int x;
+			int y;
+			
+			public Point(int x, int y){
+				this.x =x;
+				this.y =y;
+				
+				
+			}
+			
+			
+		}
+		
+		Point p =new Point(2,3);
+		Point p1 =new Point(1,2);
+		Main1.add(p, p1);
+		
+		
+		
+		
+	}
+
+}

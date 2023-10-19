@@ -1,0 +1,20 @@
+package generics_package;
+import java.util.Date;
+
+public class Main {
+	public static void main(String args[]) {
+		Box b1 = new Box();
+		b1.set("aman");
+		System.out.println(b1.get());
+		String s1 = (String)b1.get();
+		System.out.println(s1);
+		
+		
+		Box b2 = new Box();
+		b2.set(new Date());
+		System.out.println(b1.get());
+		b2.get();
+		
+	}
+
+}

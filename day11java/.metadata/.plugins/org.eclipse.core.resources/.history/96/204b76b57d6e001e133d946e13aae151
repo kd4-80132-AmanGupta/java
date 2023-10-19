@@ -1,0 +1,42 @@
+package assignment11_5;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Test5 {
+	
+public static void main(String args[]) {
+		
+		Map<String,Book> mapBook = new HashMap<>();
+		Scanner sc = new Scanner(System.in);
+//		
+//		mapBook.put(new Book("12",340.0,"shyam",3));
+//		mapBook.put(new Book("1",430.0,"Ram",3));
+//		mapBook.put(new Book("9",310.0,"sundar",3));
+//		mapBook.put(new Book("8",840.0,"bhagat",3));
+//		mapBook.put(new Book("4",740.0,"shyam",3));
+		int choice;
+		Book b;
+		do {
+			System.out.println("1. Insert Book");
+			System.out.println("2. find Book");
+			System.out.print("enter your choice : ");
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			
+			case 1 : b = new Book();
+			         b.acceptBookDetails(sc);
+				mapBook.put(b, null)
+				
+				break;
+				
+			case 2 :
+				break;
+			}
+					
+		}while(choice!=0);
+		
+
+}

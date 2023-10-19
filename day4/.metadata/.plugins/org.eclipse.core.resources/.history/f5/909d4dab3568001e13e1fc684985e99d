@@ -1,0 +1,22 @@
+package test;
+import java.util.Scanner;
+
+import assign4.Fruit;
+
+import assign4.Fruit;
+
+
+public class tester {
+	
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		Fruit f = new Fruit();
+         System.out.println("how many fruits do you want to collect in basket");
+         int basketSize = sc.nextInt();
+         
+        
+		
+		
+	}
+
+}

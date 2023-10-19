@@ -1,0 +1,6 @@
+package com.assignment10q2;
+
+public class Test {
+//	Create a list of strings. Find the string with highest length using Collections.max().
+
+}

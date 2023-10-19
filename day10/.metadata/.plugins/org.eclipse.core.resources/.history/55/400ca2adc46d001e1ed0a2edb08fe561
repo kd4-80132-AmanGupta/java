@@ -1,0 +1,10 @@
+package com.assignment10q2;
+
+public class MaxStringLength {
+	public static void main(String args[]) {
+		
+//		Create a list of strings. Find the string with highest length using Collections.max().
+		
+	}
+
+}

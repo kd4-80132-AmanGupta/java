@@ -1,0 +1,44 @@
+package assignment11q6;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Test6 {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		Student s;
+		int choice;
+		
+		Map<Integer,Student> studMap = new LinkedHashMap<>();
+		
+		
+		do {
+			System.out.println("1. Insert Book");
+			System.out.println("2. find Book");
+			System.out.print("enter your choice : ");
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			
+			case 1 : s = new Student();
+			         s.accept(sc);
+			         studMap.put(s.getRollno(), s);
+				
+				break;
+				
+			case 2 : System.out.print("enter isbn to find book : ");
+				     String rollno = sc.next();
+				     Student bk = studMap.get(rollno);
+				     if(bk!=null)
+			         System.out.println(bk); 
+				     else
+				    	 System.out.println("book not found !!");
+				break;
+			}
+					
+		}while(choice!=0);
+		
+	}
+
+}

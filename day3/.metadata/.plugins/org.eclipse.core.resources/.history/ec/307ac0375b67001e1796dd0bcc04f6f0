@@ -1,0 +1,33 @@
+package tester;
+
+import sunbeam.assignment3.Point2D;
+
+public class Tester1 {
+	public static void main(String args[]) {
+		Point2D p = new Point2D();
+		int choice=p.menu();
+		while(choice!=0) {
+			switch(choice) {
+			
+			case 1 : p.accept();
+			         break;
+			         
+			case 2 : p.displaySpecificPoint();
+			         break;
+			   
+			case 3 : p.displayAllPoint();
+			         break;
+			
+			case 4 :  p.toFindDistance();
+			          break;
+			          
+			case 5 : System.out.println("enter a valid number");
+			}
+		}
+		
+		
+		
+		
+	}
+
+}

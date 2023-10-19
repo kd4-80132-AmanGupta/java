@@ -1,0 +1,48 @@
+package assign5;
+
+import java.util.Scanner;
+
+public class BasePlusCommissionEmployee extends CommissionEmployee{
+	private double baseSalary;
+	
+
+	public BasePlusCommissionEmployee() {
+	}
+	
+	public BasePlusCommissionEmployee(String firstName, String lastName, int social_Security_Number, double grossSales,
+			float commissionRate, double baseSalary) {
+		super(firstName, lastName, social_Security_Number, grossSales, commissionRate);
+		this.baseSalary = baseSalary;
+	}
+	
+	public void accept(Scanner sc) {
+		super.accept(sc);
+		
+		System.out.print("Enter the Base Salary : ");
+		this.baseSalary = sc.nextDouble();
+	}
+
+
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+
+	public void setBaseSalary(double baseSalary) {
+		this.baseSalary = baseSalary;
+	}
+
+	@Override
+	public String toString() {
+		return "BasePlusCommissionEmployee [baseSalary=" + baseSalary + ", " + super.toString() + "]";
+	}
+	
+	public void CalculateSalary() {
+		this.baseSalary+=(this.getCommissionRate() * this.getGrossSales());
+		System.out.println("Total salary : "+this.baseSalary);
+	}
+	
+	
+	
+	
+
+}

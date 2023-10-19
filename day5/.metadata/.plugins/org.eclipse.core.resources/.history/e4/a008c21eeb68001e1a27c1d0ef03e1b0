@@ -1,0 +1,23 @@
+package assign5;
+
+public class CommissionEmployee extends Employee {
+	private double grossSales;
+	private float commissionRate;
+	
+	
+	public double getGrossSales() {
+		return grossSales;
+	}
+	public void setGrossSales(double grossSales) {
+		this.grossSales = grossSales;
+	}
+	public float getCommissionRate() {
+		return commissionRate;
+	}
+	public void setCommissionRate(float commissionRate) {
+		this.commissionRate = commissionRate;
+	} 
+	
+	
+
+}

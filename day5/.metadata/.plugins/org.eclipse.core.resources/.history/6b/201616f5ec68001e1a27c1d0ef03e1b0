@@ -1,0 +1,39 @@
+package assign5;
+
+public class CommissionEmployee extends Employee {
+	private double grossSales;
+	private float commissionRate;
+	
+	
+	public CommissionEmployee() {
+	}
+	
+	public CommissionEmployee(String firstName, String lastName, int social_Security_Number, double grossSales,
+			float commissionRate) {
+		super(firstName, lastName, social_Security_Number);
+		this.grossSales = grossSales;
+		this.commissionRate = commissionRate;
+	}
+	
+	public void accept(canner sc) {
+		super.acceptData(sc);
+	}
+
+
+
+	public double getGrossSales() {
+		return grossSales;
+	}
+	public void setGrossSales(double grossSales) {
+		this.grossSales = grossSales;
+	}
+	public float getCommissionRate() {
+		return commissionRate;
+	}
+	public void setCommissionRate(float commissionRate) {
+		this.commissionRate = commissionRate;
+	} 
+	
+	
+
+}

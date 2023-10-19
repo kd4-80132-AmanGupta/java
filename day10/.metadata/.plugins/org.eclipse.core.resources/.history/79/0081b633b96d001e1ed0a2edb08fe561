@@ -1,0 +1,6 @@
+package HighestString;
+
+public class Test {
+//	Create a list of strings. Find the string with highest length using Collections.max().
+
+}

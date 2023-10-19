@@ -1,0 +1,24 @@
+package assign5;
+
+public class HourlyEmployee extends Employee{
+	
+	private double hourly_Wages;	
+	private float hours_Worked;
+	
+	
+	public double getHourly_Wages() {
+		return hourly_Wages;
+	}
+	public void setHourly_Wages(double hourly_Wages) {
+		this.hourly_Wages = hourly_Wages;
+	}
+	public float getHours_Worked() {
+		return hours_Worked;
+	}
+	public void setHours_Worked(float hours_Worked) {
+		this.hours_Worked = hours_Worked;
+	}
+	
+	
+
+}

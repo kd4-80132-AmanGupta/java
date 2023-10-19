@@ -1,0 +1,50 @@
+package assignment1;
+
+import java.util.Comparator;
+
+public class Main {
+	
+	public static <T> void selectionSort(T[] arr, Comparator<T> c) {
+		for(int i=0; i<arr.length-1; i++) {
+		for(int j=i+1; j<arr.length; j++) {
+		if(c.compare(arr[i], arr[j]) > 0) {
+		T temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+		}
+		}
+		}
+		}
+	
+	public static void main(String args[]) {
+		
+		//local class 
+		class DoubleComparator implements Comparator<Double>{
+			
+		public int compare(Double d1, Double d2){
+			int diff = Double.compare(d1, d2);
+			return diff;
+				
+			}
+		}
+		
+		DoubleComparator d = new DoubleComparator();
+		Double arr[] = {55.5,22.2,11.1,44.4,33.3};
+		
+		System.out.println("before sort ");
+		for(Double ele : arr)
+			System.out.println(ele);
+		
+		Main.selectionSort(arr,d);
+		
+		System.out.println("after sort ");
+		for(Double ele : arr)
+			System.out.println(ele);
+		
+		
+		
+		
+		
+	}
+
+}

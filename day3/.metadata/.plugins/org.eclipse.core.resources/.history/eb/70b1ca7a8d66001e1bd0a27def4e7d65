@@ -1,0 +1,9 @@
+package sunbeam.assignment3;
+
+public class Tester1 {
+	public static void main(String args[]) {
+		Point2D p = new Point2D();
+		
+	}
+
+}

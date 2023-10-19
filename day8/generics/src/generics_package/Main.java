@@ -1,0 +1,38 @@
+package generics_package;
+import java.util.Date;
+
+public class Main {
+	
+	public static void main(String args[]) {
+//		Box b1 = new Box();
+//		b1.set("aman");
+////		System.out.println(b1.get());
+//		String s1 = (String)b1.get();
+//		System.out.println(s1);
+		
+//		Main m = new Main();
+//		int a =m.
+		
+////		
+//		Box b2 = new Box();
+//		b2.set(new Date());
+////		System.out.println(b1.get());
+//		Date d = (Date)b2.get();
+//		System.out.println(d);
+//		b2.get();
+		
+//		
+//		Box b3 = new Box();
+//		b3.set(10);
+//		System.out.println(b3.get());
+		
+//		Box b4 = new Box();
+//		b4.set(new Integer(10));
+//		String s1 = (String)b4.get();
+//		System.out.println(s1);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+package assign5;
+
+public abstract class Employee {
+	
+	private String firstName;
+	private String lastName; 
+	private int social_Security_Number;
+	
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public int getSocial_Security_Number() {
+		return social_Security_Number;
+	}
+	public void setSocial_Security_Number(int social_Security_Number) {
+		this.social_Security_Number = social_Security_Number;
+	}
+	
+	
+	
+}
+
+

@@ -1,0 +1,93 @@
+package question4;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		int input;
+		
+		Book b;
+		List<Book> lstBook = new ArrayList();
+		
+		do {
+			System.out.println("1. Add new book in list.");
+			System.out.println("2. Display all books in forward order.");
+			System.out.println("3. Delete at book given index.");
+			System.out.println("4. Check if book with given isbn is in list or not.");
+			System.out.println("5. Delete all books in list");
+			System.out.println("6. Display number of books in list");
+			System.out.println("7. Sort all books by price in desc order");
+			System.out.print("Enter your choice : ");
+			input = sc.nextInt();
+			
+			switch(input) {
+			
+			case 1 : b = new Book();
+			         b.acceptBookDetails(sc);
+			         lstBook.add(b);
+				     break;
+				     
+			case 2 : Iterator itr = lstBook.iterator();
+			         System.out.println("Books : ");
+				     while(itr.hasNext()){
+				    	Book book = (Book)itr.next();
+				    	
+				    	System.out.println(book.toString()); 
+				     }
+			     break;
+			     
+			case 3 :int index ;
+				System.out.print("choose index from : 0-"+(lstBook.size()-1) +"whose Book u want t delete");
+				index = sc.nextInt();
+				lstBook.remove(index);
+			     break;
+			     
+			case 4 :String isbn1;
+			        System.out.print("enter Book isbn : "); 
+			        isbn1 = sc.next(); 
+			        if(lstBook.contains(isbn1))
+			        	System.out.println("Book is present in List");
+			        else
+			        	System.out.println("Book is not present in list");
+			        
+			     break;
+			     
+			case 5 : lstBook.clear();
+			         System.out.println("All books deleted");
+			     break;
+			     
+			case 6 : System.out.println("no. of books in list"+lstBook.size()); 
+			     break;
+			     
+			case 7 : class priceDescComparator implements Comparator<Book>{
+				
+				public int compare(Book b1,Book b2) {
+					int diff = -Double.compare(b1.getPrice(),b2.getPrice());
+					return diff;
+					
+				}
+				
+			}
+			priceDescComparator priceDescCmp = new priceDescComparator();
+			    lstBook.sort(priceDescCmp); 
+			    for(Book ele: lstBook)
+			    	System.out.println(ele); 
+			     break;
+			     
+			  default : System.out.println("invalid choice");   
+			
+			
+			}
+			
+			
+		}while(input!=0);
+		
+	}
+
+}

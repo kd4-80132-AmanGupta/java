@@ -1,0 +1,14 @@
+package Tester;
+import assign5.*;
+
+public class Test {
+	public static void main(String args[]) {
+  
+//		Hourly employees are paid by the hour and receive overtime pay (i.e., 1.5 times their hourly salary
+//				rate) for all hours worked in excess of 40 hours.
+		
+		Employee e = new HourlyEmployee();
+		
+	}
+
+}

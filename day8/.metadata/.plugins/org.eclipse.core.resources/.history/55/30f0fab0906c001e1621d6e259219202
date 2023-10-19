@@ -1,0 +1,29 @@
+package assignment;
+
+ class Box<T extends Person> {
+	 
+	
+	private T data;         //T - employee
+	
+//	public T() {
+//		
+//	}
+	
+	public void instance(T data) {
+		 data.getSalary();
+		
+		
+	}
+	
+	
+
+}
+ public class Main{
+	 public static void main(String args[]){
+		 Box<Employee> e = new Box<Employee>();
+		 e.instance(new Employee());
+		 
+	 }
+ 
+ }
+

@@ -1,0 +1,95 @@
+package sunbeam.assignment3;
+
+import java.util.Scanner;
+
+
+
+//Q2. Copy the Point2D class , along with the package from previous assignment.
+//a) Create a class "TestPointArray1.java" in "tester" package for the following
+//b) Accept , how many no of points to plot from user.
+//c) Create suitable data structure
+//Hint : Point2D[] points=new Point2D[sc.nextInt()];
+//d) Prompt user for x & y co ordinates n store the data suitably
+//Hint : for loop
+//e) Supply Menu to user with various Options like following
+
+public class Point2D {
+	private float x;
+	private float y;
+	private Point2D arr[];
+	private int noOfPoint;
+	private static Scanner sc = new Scanner(System.in);
+	
+	
+     public Point2D() {
+		this.x=4;
+		this.y=6;
+	}
+       public int getNoOfPoint() {
+    	  return this.noOfPoint;
+       }
+              
+	
+	public void accept() {
+	
+		System.out.println("Enter the no. of points do you want to plot : ");
+		noOfPoint = Point2D.sc.nextInt();
+		
+		arr = new Point2D[noOfPoint];
+		
+		for(int i=0;i<arr.length;++i) {
+			
+	    System.out.print("Enter the value of x :");
+		arr[i].x = sc.nextFloat();
+		
+		System.out.print("Enter the value of y :");
+		arr[i].y = sc.nextFloat();
+	  }
+	}
+	
+	public void displaySpecificPoint() {
+		System.out.println("you have "+ this.noOfPoint+"no. of points :");
+		System.out.println("choose a number from 0 to "+ (this.noOfPoint-1) +" to see specific points");
+	    int num = sc.nextInt();
+	    System.out.println(arr[num].x);
+	    System.out.println(arr[num].y);  	
+	}
+	
+	public void displayAllPoint() {
+		System.out.println("All points");
+		for( Point2D p : arr) {
+	    System.out.println(p.x);
+	    System.out.println(p.y); 
+		}
+	}
+	
+	public void toFindDistance() {
+		double distance;
+		System.out.println("enter x,y coordinates : ");
+	    int x1 = sc.nextInt();
+	    int y1 = sc.nextInt();
+	   for(Point2D p : arr) {
+	    if(p.x == x1 && p.y ==y1) {
+	    	distance = Math.sqrt(Math.pow(x-x1,2)+Math.pow(y-y1,2));
+	    	}
+	    else
+	    	System.out.println("points are not equal");
+	       }
+   }
+	
+	public int menu() {
+		int choice;
+		int a = this.noOfPoint;
+		System.out.println("---------------------------------------------------------");
+		System.out.println("Enter 0. to Exit");
+		System.out.println("Enter 1. to accept the x,y coordinates:");
+		System.out.println("Enter 2. to Display details of a specific point	");
+		System.out.println("Enter 3. to Display x,y coordinates of all points");
+		System.out.println("Enter 4 .to enter a point ");
+		System.out.println("---------------------------------------------------------");
+		System.out.print("enter your choice : ");
+		choice = sc.nextInt();
+		return choice;
+	}
+		
+}

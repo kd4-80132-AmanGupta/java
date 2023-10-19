@@ -1,0 +1,74 @@
+package assign5;
+
+import java.util.Scanner;
+
+public class HourlyEmployee extends Employee{
+	
+	private double hourly_Wages;	
+	private float hours_Worked;
+	
+	
+	public HourlyEmployee() {
+	}
+	
+	
+	public HourlyEmployee(String firstName, String lastName, int social_Security_Number, double hourly_Wages,
+			float hours_Worked) {
+		super(firstName, lastName, social_Security_Number);
+		this.hourly_Wages = hourly_Wages;
+		this.hours_Worked = hours_Worked;
+	}
+	
+	public void acceptData(Scanner sc) {
+		super.acceptData(sc);
+		
+		System.out.print("Enter Hourly Wages : ");
+		this.hourly_Wages = sc.nextDouble();
+		
+		System.out.print("Enter hours_Worked: ");
+		this.hours_Worked = sc.nextFloat();
+	}
+
+
+
+	public double getHourly_Wages() {
+		return hourly_Wages;
+	}
+	public void setHourly_Wages(double hourly_Wages) {
+		this.hourly_Wages = hourly_Wages;
+	}
+	public float getHours_Worked() {
+		return hours_Worked;
+	}
+	public void setHours_Worked(float hours_Worked) {
+		this.hours_Worked = hours_Worked;
+	}
+
+
+	@Override
+	public String toString() {
+		return "HourlyEmployee [hourly_Wages=" + hourly_Wages + ", hours_Worked=" + hours_Worked +", "+ super.toString() + "]";
+	}
+
+
+	@Override
+	void CalculateSalary() {
+		if(this.hours_Worked<=40) {
+			this.hourly_Wages*=this.hours_Worked;
+			System.out.println("total salary : "+this.hourly_Wages);
+			
+		}
+	else if(this.hours_Worked > 40) {
+			this.hourly_Wages=this.hourly_Wages * 40 + this.hourly_Wages * (this.hours_Worked -40) * 1.5; 
+			System.out.println(this.hourly_Wages);
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+
+}

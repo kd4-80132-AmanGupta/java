@@ -1,0 +1,92 @@
+package com.assignment10q3;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Test {
+//	Create LinkedList<> of Employee. Perform add, delete, ﬁnd, sort, edit functionality in a menu driven program. Refer hint below for edit/update
+//	functionality:
+	
+	public static void main(String args[]) {
+		
+		List<Employee> listEmp = new LinkedList<>();
+		Employee e = new Employee();;
+		
+		Scanner sc = new Scanner(System.in);
+		int choice;
+		
+		
+		do {
+			System.out.println("0. Exit");
+			System.out.println("1. Add Employee");
+			System.out.println("2. delete Employee");
+			System.out.println("3. find Employee");
+			System.out.println("4. sort Employee");
+			System.out.println("5. edit Employee");
+			System.out.println("6. display Employee");
+			System.out.println("enter your choice : ");
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			
+			case 1: 
+			        e.acceptData(sc);
+			        listEmp.add(e);
+				break;
+				
+			case 2:System.out.print("Enter id of employee ");
+			       int id = sc.nextInt();
+			       
+			       Employee emp = new Employee();
+			       emp.setEmpId(id);
+			      int index = listEmp.indexOf(e);
+			       if(index!=-1)
+			      listEmp.remove(index);
+			       else
+			    	   System.out.println("Employee which u wnt to delete is not present");
+				break;
+				
+			case 3:System.out.println("Enter your id :");
+			       int indx = sc.nextInt();
+			       Employee empp = new Employee();
+			       empp.setEmpId(indx);
+			       if(listEmp.contains(empp)){
+			    	   int i = listEmp.indexOf(empp);
+			    	   System.out.println("Employee found at index "+i+":\n"+listEmp.get(i));
+			       }
+			    	   else 
+			    		   System.out.println("Employee not found"); 
+			       
+				break;
+				
+			case 4: class idComparator implements Comparator<Employee>{
+	/*d*/			 public int compare(Employee e1,Employee e2){
+					 int diff = e1.getEmpId() - e2.getEmpId();
+					 return diff;
+				 }
+				
+			}
+			idComparator isCmp = new idComparator();
+			Collections.sort(listEmp,isCmp);
+				break;
+				
+			case 5:
+				break;
+				
+		   default : System.out.println("invalid choice");
+				break;
+				
+				
+			}
+			
+		}while(choice!=0);
+		
+		
+		
+	}
+
+}
